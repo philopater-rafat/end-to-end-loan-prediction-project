@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Prediction Result</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+  <style>
+    .result-box {
+      background-color: #ffffff;
+      padding: 30px;
+      border-radius: 10px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+      text-align: center;
+      width: 400px;
+      margin: auto;
+      margin-top: 100px;
+    }
+
+    .prediction {
+      font-size: 24px;
+      font-weight: bold;
+      color: #2f80ed;
+      margin-top: 20px;
+    }
+
+    .back-button {
+      margin-top: 25px;
+      display: inline-block;
+      padding: 10px 20px;
+      background-color: #2f80ed;
+      color: white;
+      text-decoration: none;
+      border-radius: 5px;
+    }
+
+    .back-button:hover {
+      background-color: #1366d6;
+    }
+  </style>
+</head>
+<body>
+  <div class="result-box">
+    <h2>Loan Prediction Result</h2>
+    <div class="prediction">
+      {{ prediction }}
+    </div>
+    <a href="/" class="back-button">Back to Form</a>
+  </div>
+</body>
+</html>
